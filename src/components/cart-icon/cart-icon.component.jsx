@@ -16,7 +16,6 @@ export default function CartIcon() {
     <div className="cart-icon-container" onClick={toggleIsCartOpen}>
       {/* <ShoppingIcon className="shopping-icon" /> */}
       <img src={ShoppingIcon} className="shopping-icon" />
-      {console.log(countItems)}
       <span className="item-count" >{countItems}</span>
     </div>
   )
