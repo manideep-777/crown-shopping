@@ -6,7 +6,7 @@ import { auth, signInWithGooglePopup, createUserDocumentFromAuth, signInWithGoog
 import SignUpForm from '../sign-up-form/sign-up-form.component'
 import SignInForm from '../sign-in-form/sign-in-form.component'
 
-import './authentication.styles.scss'
+import { AuthenticationContainer } from './authentication.styles'
 
 export default function Authentication() {
 
@@ -22,12 +22,12 @@ export default function Authentication() {
   }
 
   return (
-    <div className="authentication-container">
+    <AuthenticationContainer>
       {/* sign in
       <button onClick={logGoogleUser} >Sign-in with google pop</button> */}
       {/* <button onClick={signInWithGoogleRedirect} >Sign-in with google redirect</button> */}
       <SignInForm />
       <SignUpForm />
-    </div>
+    </AuthenticationContainer>
   )
 }
