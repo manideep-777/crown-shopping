@@ -7,9 +7,9 @@ import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
 const ProductCard = ({ product }) => {
   const { name, price, imageUrl } = product;
-  const { addItemsToCart } = useContext(CartContext);
+  const { addItemToCart } = useContext(CartContext);
 
-  const addProductToCart = () => addItemsToCart(product);
+  const addProductToCart = () => addItemToCart(product);
 
   return (
     <ProductCardContainer>
