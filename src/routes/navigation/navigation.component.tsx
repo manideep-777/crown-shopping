@@ -15,12 +15,12 @@ import { signOutStart } from '../../store/user/user.action';
 
 import { NavigationContainer, LogoContainer, NavLinksContainer, NavLink } from './navigation.styles';
 
-const Navigation = () => { 
+const Navigation = () => {
     const dispatch = useDispatch();
     const currentUser = useSelector(selectCurrentUser);
     const isCartOpen = useSelector(selectIsCartOpen);
 
-    const signOutHandler = () =>{
+    const signOutHandler = () => {
         dispatch(signOutStart());
     }
 
@@ -35,13 +35,15 @@ const Navigation = () => {
                         SHOP
                     </NavLink>
 
-                    {currentUser ? (<NavLink as='span' onClick={signOutHandler} >SIGN OUT</NavLink>) : (<NavLink to='/auth'>
+                    {currentUser ? (
+                        <span onClick={signOutHandler} style={{ cursor: 'pointer' }}>SIGN OUT</span>
+                    ) : (<NavLink to='/auth'>
                         SIGN IN
                     </NavLink>)}
-                    
+
                     <CartIcon />
                 </NavLinksContainer>
-                {isCartOpen && <CartDropdown /> }
+                {isCartOpen && <CartDropdown />}
             </NavigationContainer>
             <Outlet />
         </Fragment>
