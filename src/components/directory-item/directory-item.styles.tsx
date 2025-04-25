@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const BackgroundImage = styled.div`
+interface BackgroundImageProps {
+  $imageUrl: string;
+}
+
+export const BackgroundImage = styled.div<BackgroundImageProps>`
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -69,3 +73,4 @@ export const DirectoryItemContainer = styled.div`
 }
 `
    
+

@@ -5,8 +5,13 @@ import { addItemToCart } from '../../store/cart/cart.action';
 import { selectCartItems } from '../../store/cart/cart.selector';
 
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
+import { CategoryItem } from '../../store/categories/categories.types';
+import { FC } from 'react';
+interface ProductCardProps {
+  product: CategoryItem;
+}
 
-const ProductCard = ({ product }) => {
+const ProductCard: FC<ProductCardProps> = ({ product }) => {
   const { name, price, imageUrl } = product;
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartItems);
