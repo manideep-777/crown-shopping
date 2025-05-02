@@ -51,7 +51,7 @@ npm run dev
 ```
 
 ## 📁 Project Structure
-
+<pre>
 src/
 ├── components/ # Reusable UI components
 ├── store/ # Redux store configuration
@@ -59,7 +59,7 @@ src/
 ├── utils/ # Utility functions
 ├── assets/ # Static assets
 └── styles/ # Global styles
-
+</pre>
 ## 🎯 Key Features
 
 - **Category Navigation**: Browse products by categories
