@@ -6,7 +6,7 @@ import { selectCategoriesMap, selectCategoriesIsLoading } from '../../store/cate
 
 import ProductCard from '../../components/product-card/product-card.component'
 import Spinner from '../../components/spinner/spinner.componenet';
-import { CategoryContainer, CategoryTitle } from './category.styles'
+import { CategoryContainer, CategoryTitle, CategoryMainContainer } from './category.styles'
 
 type CategoryRouteParams = {
     category: string;
@@ -23,7 +23,7 @@ const Category = () => {
     }, [category, categoriesMap]);
 
     return (
-        <Fragment>
+        <CategoryMainContainer>
             <CategoryTitle>{category}</CategoryTitle>
             {isLoading ? <Spinner /> : (
             <CategoryContainer>
@@ -34,7 +34,7 @@ const Category = () => {
                 }
             </CategoryContainer>
             )}
-        </Fragment>
+        </CategoryMainContainer>
     )
 }
 
