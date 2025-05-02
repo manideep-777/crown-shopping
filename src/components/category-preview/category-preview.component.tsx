@@ -11,7 +11,7 @@ interface CategoryPreviewProps {
 
 const CategoryPreview: FC<CategoryPreviewProps> = ({ title, products }) => {
     return (
-        <CategoryPreviewContainer>
+        <CategoryPreviewContainer >
             <h2>
                 <Link to={`/shop/${title}`}>
                     <Title>{title.toUpperCase()}</Title>

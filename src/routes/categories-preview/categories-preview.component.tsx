@@ -9,7 +9,7 @@ const CategoriesPreview = () => {
   const categoriesMap = useSelector(selectCategoriesMap);
   const isLoading = useSelector(selectCategoriesIsLoading);
   return (
-    <Fragment>
+    <Fragment >
         {isLoading ? <Spinner /> : (
             Object.keys(categoriesMap).map((title) => {
                 const products = categoriesMap[title];
