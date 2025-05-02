@@ -52,6 +52,14 @@ npm run dev
 
 ## 📁 Project Structure
 
+src/
+├── components/ # Reusable UI components
+├── store/ # Redux store configuration
+├── routes/ # React Router routes
+├── utils/ # Utility functions
+├── assets/ # Static assets
+└── styles/ # Global styles
+
 ## 🎯 Key Features
 
 - **Category Navigation**: Browse products by categories
